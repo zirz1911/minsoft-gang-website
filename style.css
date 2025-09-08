@@ -40,7 +40,7 @@ h6 {
 	z-index: 1030;
 }
 .navbar .active {
-	color: #5f0099 !important;
+	color: #000e32 !important;
 }
 .navbar .navbar-brand {
 }
@@ -55,7 +55,7 @@ h6 {
 	font-size: 13px;
 }
 .navbar .nav-item a:hover {
-	color: #5f0099;
+	color: #3f86ff;
 }
 .navbar .nav-link {
 	position: relative;
@@ -96,9 +96,11 @@ h6 {
 .nav-scroll .active {
 	position: relative;
 }
-.banner {
+
+/* Banner บน */
+.banner { 
 	background: #7a60ff;
-	background: linear-gradient(to left, #7a60ff, #cd9ffa);
+	background: linear-gradient(to left, #6f7afa, #162d87);
 	padding:100px 0px;
 	position:relative;
 }
@@ -223,7 +225,7 @@ h6 {
 	overflow: hidden;
 }
 .video-overlay {
-	background: linear-gradient(to left, rgba(122, 96, 255, 0.90), rgba(205, 159, 250, 0.90));
+	background: linear-gradient(to left, rgba(255, 0, 0, 0.9), rgba(250, 188, 159, 0.9));
 }
 .video-section h3 {
 	font-weight: 600;
@@ -322,7 +324,7 @@ h6 {
 }
 .testimonial {
 	background: #7a60ff;
-	background: linear-gradient(to left, #7a60ff, #cd9ffa);
+	background: linear-gradient(to left, #7a60ff, #fa9f9f);
 	padding:100px 0px;
 	position:relative;
 }
@@ -437,6 +439,19 @@ input {
 	background: #7a60ff;
 	background: linear-gradient(to left, #7a60ff, #cd9ffa);
 	cursor:pointer;
+    transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+
+/* Contact button hover/active effects */
+.contact-card .btn-grad:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 6px 18px rgba(142, 30, 252, 0.45);
+    transform: translateY(-1px);
+}
+.contact-card .btn-grad:active {
+    transform: translateY(0);
+    filter: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 .contact-info {
 	padding: 2rem 2rem 1rem;
@@ -451,8 +466,32 @@ input {
 	font-size: 20px;
 }
 .contact-item p {
-	line-height: 20px;
-	margin: 0;
+    line-height: 20px;
+    margin: 0;
+}
+/* Social contact cards */
+.contact-card {
+    display: block;
+    border: 1px solid #e4e4e4;
+    border-radius: 12px;
+    transition: transform .2s ease, box-shadow .2s ease;
+    color: inherit;
+    text-decoration: none;
+}
+.contact-card:hover {
+    text-decoration: none;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+.contact-card .card-body {
+    padding: 1.5rem;
+}
+.social-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: .75rem;
 }
 .download {
 	background: #7a60ff;
